@@ -103,3 +103,13 @@ r2=["gfg","ide","courses"]
 
 d3={r1[i]:r2[i] for i in range(len(r2))}
 print(d3)
+
+
+##########################################################
+## Inverting a dictionary 
+
+d1={101:"gfg",103:"practice",102:"ide"}
+
+d2={v:k for (k,v) in d1.items()}
+
+print(d2)
