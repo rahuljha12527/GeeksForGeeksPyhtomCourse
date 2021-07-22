@@ -38,6 +38,8 @@ print(l)
 
 ####################################################################
 
+######## Time Complexity o(n) and space complexity O(1)
+
 l=[10,20,30,40,50]
 d=2
 def leftRotates(l,d):
