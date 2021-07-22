@@ -26,3 +26,30 @@ else:
 
 
 print(listIsSoretd(l))
+
+
+
+################################################################################
+
+## library method
+def isSorted(l):
+
+    sl=sorted(l)
+    if sl==l:
+        return True
+    else:
+        return False
+
+
+if isSorted(l):
+    print("Yes")
+else:
+    print("No")
+
+
+
+
+
+
+
+
