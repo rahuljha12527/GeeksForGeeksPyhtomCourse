@@ -43,9 +43,9 @@ print(l)
 l=[10,20,30,40,50]
 d=2
 def leftRotates(l,d):
-
     n=len(l)
     reverse(l,0,d-1)
+
     reverse(l,d,n-1)
     reverse(l,0,n-1)
 
