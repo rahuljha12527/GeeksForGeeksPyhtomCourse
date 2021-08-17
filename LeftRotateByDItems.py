@@ -66,3 +66,9 @@ def reverse(l,a,b):
 
 leftRotates(l,d)
 print(l)
+
+
+ if n < 10:
+            return 1
+        
+        return 1 + self.countDigits(n/10)
