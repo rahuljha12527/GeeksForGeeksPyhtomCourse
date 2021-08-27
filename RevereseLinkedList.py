@@ -12,3 +12,24 @@ def reverseLinkedList(head):
         curr.key=stack.pop()
         curr=curr.next
     return head
+
+
+def reverseLinkedList(head):
+    curr=head
+    prev=None
+    while curr is not None:
+        next=curr.next
+        curr.next=prev
+        prev=curr
+        curr=next
+    return prev
+
+    
+def reverseList(curr,prev=None):
+    if curr==None:
+        return prev
+    next=curr.next
+    curr.next=prev
+    return reverseList(next,curr)
+
+   
