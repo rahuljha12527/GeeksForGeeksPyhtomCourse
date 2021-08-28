@@ -1,75 +1,44 @@
-
-class Node:
-    def __init__(self,k):
-        self.key=k
-        self.next=None
-
-def insertPos(head,data,pos):
-
+def insertAtPosition(head,pos,data):
+    #code here
+    
     temp=Node(data)
-
-    if pos==1:
-        temp.next=head
-        return temp
+    if pos==0:
+        #print(temp)
+        tempp=Node(data)
+        tempp.next=head
+        #print(temp)
+        return tempp
+    
+    
+    len=0
     curr=head
-
-    while curr!=None:
+    while curr:
         curr=curr.next
-        if curr==None:
-            return head
-        
+        len=len+1
+    
+    
+    if pos>len:
+        return head
+    
+    
+    curr=head
+    for i in range(pos-1):
+        curr=curr.next
+    
     
     temp.next=curr.next
     curr.next=temp
+    
     return head
 
-def printList(head):
-    curr = head
-    while curr != None:
-        print(curr.key, end=" ")
-        curr = curr.next
-    print()
 
+    def insertAtPosition(head,pos,data):
 
-head = Node(10)
-head.next = Node(20)
-head.next.next = Node(30)
-head.next.next.next = Node(40)
-head.next.next.next.next = Node(50)
-
-printList(head)
-
-head = insertPos(head,45,4)
-
-printList(head)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-head=Node(10)
-head.next.next=Node(30)
-head.next=Node(20)
-head.next.next.next.next=Node(40)
-head.next.next.next.next.next=Node(50)
-
-
-
-printList(head)
-
-head=insertPos(head,45,4)
-
-printList(head)
-
+    node=Node(data)
+    i=1
+    while head and i<pos:
+        i+=1
+        head=head.next
+    if head:
+        node.next=head.next
+        head.next=node
