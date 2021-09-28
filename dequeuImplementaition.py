@@ -69,6 +69,8 @@ if __name__=='__main__':
                 pop_back_ppb(dq)
                 print(len(dq))
 
+                
+
             else:
                 x=front_dq(dq)
                 print(x)
